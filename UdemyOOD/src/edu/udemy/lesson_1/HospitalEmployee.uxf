@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>40</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+-id: int
+-name: String
+--
++getName(void): String
++getID(void): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>80</y>
+      <w>340</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ReportFormatter
+--
+
+--
+-parseObjToXML(Object obj): String
+-parseObjToCSV(Object obj): String
++getFormattedValue(void): String
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>120</y>
+      <w>310</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>EmployeeDAO
+--
+-connectionManager: DBConnectionManager
+--
++saveEmployee(Employee emp): void
++removeEmployee(Employee emp): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>70</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0;200.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>280</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>EmployeeReportFormatter
+--
+-emp: Employee
+-formatType: FormatType
+--
++getFormattedEmployee(): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>190</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>150</y>
+      <w>240</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;170.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>370</y>
+      <w>340</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>DBConnectionManager
+--
+
+--
++getManagerInstance(void): DBConnectionManager
++connect(void): void
++getConnectionObj(void):void
++disconnect(void): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>210</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
